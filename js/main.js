@@ -1,6 +1,8 @@
 const header=document.querySelector('.navbar');window.addEventListener('scroll',()=>header?.classList.toggle('scrolled',scrollY>20));
 const observer=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible')}),{threshold:.12});document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
 const year=document.querySelector('#year');if(year)year.textContent=new Date().getFullYear();
+const trustedStrip=document.querySelector('.trusted');
+if(trustedStrip){trustedStrip.insertAdjacentHTML('afterend',`<div class="studio-marquee" aria-hidden="true"><div class="studio-marquee-track"><span>Strategy <i class="bi bi-asterisk"></i> Creative <i class="bi bi-asterisk"></i> Meta Ads <i class="bi bi-asterisk"></i> Google Ads <i class="bi bi-asterisk"></i> Measurable Growth <i class="bi bi-asterisk"></i></span><span>Strategy <i class="bi bi-asterisk"></i> Creative <i class="bi bi-asterisk"></i> Meta Ads <i class="bi bi-asterisk"></i> Google Ads <i class="bi bi-asterisk"></i> Measurable Growth <i class="bi bi-asterisk"></i></span></div></div>`)}
 document.querySelectorAll('form[data-demo]').forEach(form=>form.addEventListener('submit',e=>{e.preventDefault();const btn=form.querySelector('button[type=submit]');btn.innerHTML='<i class="bi bi-check-circle me-2"></i>Message sent';btn.classList.replace('btn-primary','btn-success');form.reset()}));
 
 // Homepage conversion-focused sections
