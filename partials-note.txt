@@ -1,0 +1,1 @@
+This is a static multi-page site. The navbar and footer are intentionally repeated in each HTML file so every page works independently without a server-side templating engine.
